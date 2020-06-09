@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AutoInsuranceForum.DataBase", "AutoInsuranceForum.DataBase\AutoInsuranceForum.DataBase.sqlproj", "{5D65B066-1F5E-4EE3-828C-E28ACDD8D2F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoInsuranceForum", "AutoInsuranceForum\AutoInsuranceForum.csproj", "{FEB3A051-EC9F-4291-9D90-00ACEE412560}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D65B066-1F5E-4EE3-828C-E28ACDD8D2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D65B066-1F5E-4EE3-828C-E28ACDD8D2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D65B066-1F5E-4EE3-828C-E28ACDD8D2F2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5D65B066-1F5E-4EE3-828C-E28ACDD8D2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D65B066-1F5E-4EE3-828C-E28ACDD8D2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D65B066-1F5E-4EE3-828C-E28ACDD8D2F2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FEB3A051-EC9F-4291-9D90-00ACEE412560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB3A051-EC9F-4291-9D90-00ACEE412560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB3A051-EC9F-4291-9D90-00ACEE412560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB3A051-EC9F-4291-9D90-00ACEE412560}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49C88F51-5828-44E3-852D-F90D91081942}
+	EndGlobalSection
+EndGlobal

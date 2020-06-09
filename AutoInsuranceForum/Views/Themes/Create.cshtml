@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Theme Create";
+}
+    <link rel="stylesheet" href="~/css/themes/theme-create/create-t.css" />
+<main id="main">
+    <div id="body-wrapper">
+        <div id="page-header" class="page-width">
+            <div class="headerbar" role="banner">
+                <div class="inner">
+                    <div id="site-description" class="site-description">
+                        <p class="sitename">Автостраховка.ru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrap" class="page-width">
+            <div>
+                <div class="navbar">
+                    <ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+                        <li class="breadcrumbs" itemscope="" style="max-width: 889px;">
+                            <span><a asp-area="" asp-controller="Home" asp-action="Index">Главная </a></span>
+                            <span><i class="fas fa-angle-double-right"></i> Форумы </span>
+                            <span><i class="fas fa-angle-double-right"></i> <i class="fas fa-home"></i> Основной форум </span>
+                            <span><i class="fas fa-angle-double-right"></i> Создание темы </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a id="start_here" class="top-anchor"></a>
+            <div id="page-body" class="page-body" role="main">
+                <h2 class="forum-title"><i class="fas fa-home"></i> Основной форум</h2>
+                <div class="action-bar bar-top">
+                    <a asp-area="" asp-controller="Themes" asp-action="Create" class="button" title="Новая тема">
+                        <span>Новая тема</span> <i class="fas fa-edit" aria-hidden="true"></i>
+                    </a>
+                    <div class="pagination">
+                        ~ тема
+                        • Страница <strong>1</strong> из <strong>1</strong>
+                    </div>
+                </div>
+                <form asp-action="CreateGood" method="post">
+                    <div class="panel" id="postingbox">
+                        <div class="inner">
+                            <h3>Новая тема</h3>
+                            <fieldset class="fields1">
+                                <dl style="clear: left;">
+                                    <dt><label for="subject">Заголовок(Тема):</label></dt>
+                                    <dd>
+                                        <input type="text" name="Theme_Name" placeholder="Тема" id="Theme_Name" size="45" maxlength="120" tabindex="2" value="" class="inputbox autowidth">
+                                    </dd>
+                                </dl>
+                                <div id="smiley-box" class="smiley-box">
+                                    <div class="bbcode-status">
+                                        <hr> Code <em>ВЫКЛЮЧЕН</em><br>
+                                        [img] <em>ВЫКЛЮЧЕНЫ</em><br>
+                                        [flash] <em>ВЫКЛЮЧЕНЫ</em><br>
+                                        [url] <em>ВЫКЛЮЧЕНЫ</em><br>
+                                        Смайлики <em>ВЫКЛЮЧЕНЫ</em>
+                                    </div>
+                                </div>
+                                <div id="message-box" class="message-box">
+                                    <textarea name="Content" id="Content" placeholder="Сообщение" rows="15" cols="76" class="inputbox" style="position: relative;" autofocus></textarea>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="panel bg2">
+                        <div class="inner">
+                            <fieldset class="submit-buttons">
+                                @*<input type="submit" accesskey="k" tabindex="7" name="save" value="Сохранить черновик" class="button2">&nbsp; 
+                                <input type="submit" tabindex="5" name="preview" value="Предпросмотр" class="button1">&nbsp;*@
+                                <input type="submit" style="height: 35px;" accesskey="s" tabindex="6" name="submit" value="Отправить" class="button1 default-submit-action">&nbsp;
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+                <div class="navbar" role="navigation">
+                    <div class="inner">
+                        <ul id="nav-footer" class="nav-footer linklist" role="menubar">
+                            <li class="rightside">
+                                <a href="#">
+                                    <span>Связаться с администрацией</span>
+                                </a>
+                            </li>
+                            <li class="rightside">Часовой пояс: <span title="Новосибирск">UTC+07:00 |</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<script>
+        $('textarea')
+	.focus(function() { 
+		$(this).css("background", "none"); 
+	})
+	.blur(function() { 
+		if ($(this)[0].value == '') { 
+			$(this).css("background", "url(images/title_photo.jpg) center center no-repeat"); 
+		} 
+	});
+    </script>*@
+</main>

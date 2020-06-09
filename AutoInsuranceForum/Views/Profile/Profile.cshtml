@@ -1,0 +1,49 @@
+﻿@model UsersViewModel
+
+<link rel="stylesheet" href="~/css/profile/profile.css" />
+
+@{
+    ViewData["Title"] = "Themes";
+}
+<nav class="nav-menu">
+    <ul>
+        <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="drop-down">
+            <a href="">Меню</a>
+            <ul>
+                <li><a asp-area="" asp-controller="Auth" asp-action="Auth">Авторизация</a></li>
+                <li><a asp-area="" asp-controller="Auth" asp-action="Reg">Регистрация</a></li>
+                <li class="drop-down">
+                    <a href="#">Форум</a>
+                    <ul>
+                        <li><a asp-area="" asp-controller="Themes" asp-action="Themes">Форумы</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index">Поддержка</a></li>
+    </ul>
+</nav><!-- .nav-menu -->
+<main id="main">
+    <div class="main">
+        <div class="block">
+            <div class="container">
+                <div class="my-container">
+
+                    <div class="user-profile">
+                        <img src="@Model.Users_Img" alt="User" class="mr-3 mt-2 rounded-circle">
+                    </div>
+                    <div class="user-profile-void">
+                        <p>Логин: <span>@Model.Users_Login</span></p>
+                        <p>Email: <span>@Model.Users_Email</span></p>
+                        <p>Никнейм: <a href="profile.php" style="color: red" title="role"><span>@Model.Users_Name</span></a></p>
+                        <p>Город: <span>@Model.Users_City</span></p>
+                        @*<p>Дата регистрации: <span>@user.</span></p>*@
+                        @*<p>Кол-во созданых тем: <span>@user.Count</span></p>*@
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-dark btn-lg btn-block redact">Редактировать профиль</button>
+        </div>
+    </div>
+</main>

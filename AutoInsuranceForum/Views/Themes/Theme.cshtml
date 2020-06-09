@@ -1,0 +1,156 @@
+﻿@model ThemesViewModel
+@{
+    ViewData["Title"] = "Theme Create";
+}
+<link rel="stylesheet" href="~/css/themes/theme/theme.css" />
+<main id="main">
+    <div id="body-wrapper">
+        <div id="page-header" class="page-width">
+            <div class="headerbar" role="banner">
+                <div class="inner">
+                    <div id="site-description" class="site-description">
+                        <p class="sitename">Автостраховка.ru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrap" class="page-width">
+            <div>
+                <div class="navbar">
+                    <ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks">
+                        <li class="breadcrumbs" style="max-width: 889px;">
+                            <span><a asp-area="" asp-controller="Home" asp-action="Index">Главная </a></span>
+                            <span><i class="fas fa-angle-double-right"></i> Форумы </span>
+                            <span><i class="fas fa-angle-double-right"></i> <i class="fas fa-home"></i> Основной форум </span>
+                            <span><i class="fas fa-angle-double-right"></i> @Model?.Themes_Name</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a id="start_here" class="top-anchor"></a>
+            <div id="page-body" class="page-body" role="main">
+                <h2 class="forum-title"><i class="fas fa-home"></i> Основной форум</h2>
+                <div class="action-bar bar-top">
+                    <a asp-area="" asp-controller="Themes" asp-action="Create" class="button" title="Новая тема">
+                        <span>Новая тема</span> <i class="fas fa-edit" aria-hidden="true"></i>
+                    </a>
+                    <div class="pagination">
+                        @*~ тема*@
+                        • Страница <strong>1</strong> из <strong>1</strong>
+                    </div>
+                </div>
+                @* Тема *@
+                <div id="p1" class="post has-profile bg2">
+                    <div class="inner">
+
+                        <dl class="postprofile resized" id="profile1" style="z-index: 28; min-height: 177px;">
+                            <dt class="has-profile-rank no-avatar">
+                                <div class="avatar-container"></div>
+                                <a href="#" style="color: #AA0000;" class="username-coloured">@Model?.User?.Users_Name</a>
+                            </dt>
+
+                            <dd class="profile-rank"><i class="fas fa-user-tie"></i> Администратор</dd>
+                            <dd class="profile-posts"><strong>Ответы: </strong><a href="#">@Model?.Comments?.Count()</a></dd>
+                            <dd class="profile-joined"><strong>Зарегистрирован:</strong> @Model?.Themes_Date</dd>
+
+
+
+                        </dl>
+
+                        <div class="postbody">
+                            <div id="post_content1">
+
+                                <h3 class="first"><a href="#">@Model?.Themes_Name</a></h3>
+
+                                <p class="author">
+                                    <i class="fas fa-file" aria-hidden="true"></i><span class="sr-only">Сообщение</span>
+                                    <span class="responsive-hide"><strong><a href="#" style="color: #AA0000;" class="username-coloured">@Model?.User?.Users_Name</a></strong> » </span>@Model?.Themes_Date
+                                </p>
+                                <div class="content">@Model?.Themes_Content</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <h3><i class="fas fa-comments"></i> Ответы:</h3>
+                <div class="block">
+                    <div class="com_users">
+                        @if (Model?.Comments != null)
+                        {
+
+                            @foreach (var com in Model.Comments)
+                            {
+                                <div class="block">
+                                    <div class="Comment" style="margin: 15px;">
+                                        <div class="Re-Comment" style="padding: 5px 0px 10px 0px;">
+                                            <h5 class="mt-0" style="font-size: 12px;"><i class="fas fa-comment"></i> Ответ: @Model?.Themes_Name</h5>
+                                        </div>
+                                        <div class="media">
+                                            <img src="~/images/avatar/0.jpg" class="mr-3 img-comment" style="width: 60px" alt="user">
+                                            <div class="media-body">
+                                                <a href="#" style="color: cyan;" class="username-coloured">@com.User_Comment?.Users_Name</a> » @com.Comment_Date
+                                                <div class="theme-content" style="font-size: 14px;">
+                                                    @com.Comment_Content
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="comments">
+                    <form asp-action="Comment_Add" method="post">
+                        <div class="form-group">
+                            <label>Ваш ответ:</label>
+                            <input type="hidden" name="Comment_Theme_Id" value="@Model?.Themes_Id" />
+                            <textarea class="form-control" name="Comment" rows="3"></textarea>
+                        </div>
+                        <input type='submit' name="submit" value='Отправить' class="button comment-input" />
+                    </form>
+                </div>
+            </div>
+            <div class="action-bar actions-jump">
+                <p class="jumpbox-return">
+                    <a asp-area="" asp-controller="Themes" asp-action="Themes" class="left-box arrow-left" accesskey="r">
+                        <i class="fas fa-angle-left" aria-hidden="true"></i><span> Вернуться в «Основной форум»</span>
+                    </a>
+                </p>
+            </div>
+            <div class="navbar" role="navigation">
+                <div class="inner">
+                    <ul id="nav-footer" class="nav-footer linklist" role="menubar">
+                        <li class="rightside">
+                            <a href="#">
+                                <i class="fas fa-user-shield"></i><span> Связаться с администрацией</span>
+                            </a>
+                        </li>
+                        <li class="rightside"><i class="fas fa-clock"></i> Часовой пояс: <span title="Новосибирск">UTC+07:00 |</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="footer-row">
+                <span class="footer-copyright">Разработчик <a href="https://vk.com/maxeprime" target="_blank">Max Kolbin</a>® | © ASP.NET Core</span>
+            </p>
+            <p class="footer-row" role="menu">
+                <a class="footer-link" href="#" title="Конфиденциальность">
+                    <span class="footer-link-text">Конфиденциальность</span>
+                </a>
+                |
+                <a class="footer-link" href="#" title="Правила">
+                    <span class="footer-link-text">Правила</span>
+                </a>
+            </p>
+        </div>
+    </div>
+</main>

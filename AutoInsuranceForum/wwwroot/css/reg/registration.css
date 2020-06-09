@@ -1,0 +1,249 @@
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.card{
+    height: 550px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    /*background-color: rgba(0,0,0,0.5) !important;*/
+    background-color: transparent;
+}
+
+.social_icon span{
+    font-size: 40px;
+    margin-left: 10px;
+    /*color: #FFC312;*/
+    color: #4a76a8;
+}
+
+.social_icon span:hover{
+    color: white;
+    cursor: pointer;
+}
+.card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+.card-header h1{
+    margin: 10px 0px 0px 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.social_icon{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+}
+
+.input-group-prepend span{
+    width: 50px;
+    /*background-color: #FFC312;*/
+    background-color: rgba(0,102,0,1);
+    color: black;
+    border:0 !important;
+}
+
+input:focus{
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+    color: white;
+}
+.remember>a{
+    text-decoration: none;
+    color: white;
+}
+.remember>a:hover{
+    color: gold;
+}
+
+.remember input
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn{
+    margin-top: 1em;
+    color: black;
+    /*background-color: #FFC312;*/
+    background-color: rgba(0,102,0,1);
+    width: 150px;
+}
+
+.login_btn:hover{
+    color: black;
+    background-color: white;
+}
+
+.links{
+    color: white;
+}
+
+.links a{
+    margin-left: 4px;
+}
+
+.breadcrumb{
+    background-color: rgba(23,27,36,0.9);
+    width: 60vw;
+}
+.cont-max{
+
+}
+.container{
+    /*border-radius: 20px;*/
+    /*padding: 1em;*/
+
+}
+.wrapper-2{
+    background: rgba(54, 54, 54, 0.9);
+    /*background: url("/resource/img/fonts2.jpg") center / cover no-repeat ;*/
+}
+.mk2{
+
+}
+.container-text{
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+}
+.container-razdel{
+    /*background: rgba(23,27,36,1);*/
+    width: 50vw;
+    border-radius: 0.5em;
+    margin-right: 10px;
+}
+.container-razdel-theme{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /*background-color: #f8ef42;*/
+    /*background-image: linear-gradient(315deg, #f8ef42 0%, #0fd64f 74%);*/
+    /*background-color: #7ee8fa;*/
+    /*background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);*/
+    /*background-color: #00b712;*/
+    background-color: #3ee577;
+    background-image: linear-gradient(315deg, #3ee577 0%, #42fcdb 74%);
+    /*background-color: #20bf55;*/
+    /*background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);*/
+    height: 40px;
+    padding: 7px 0px 10px 10px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+.container-razdel-theme>a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.container-razdel>a{
+    margin-top: 0.5em;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 34px;
+    color: #e3e2e6;
+
+}
+.container-theme{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    color: #e3e2e6;
+    background: rgba(23,27,36,1);
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+.container-theme>a{
+    text-decoration: none;
+    color: #e3e2e6;
+}
+.container-theme>a:hover{
+    color: #6351ce;
+}
+.t-1{
+    border-left: 2px solid white;
+}
+.t-2{
+    border-right: 2px solid white;
+}
+.container-theme-user{
+    margin-right: 5vw;
+}
+.hr-shelf{
+    margin: -30px auto 10px;
+    padding: 0;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #1f1209;
+    box-shadow: 0 20px 20px -20px #333;
+    width: 95%;
+}
+
+.Text-name{
+    font-size: 20px;
+    color: white;
+    text-wrap: none;
+    width: 100%;
+    height: 60px;
+    padding: 10px 0px 0px 5px;
+
+}
+.Text-name>span{
+    /*color: #7FFF00;*/
+    color: #00b712;
+    color-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
+}
+.bounceInDown{
+    color: white;
+    /*background: #4ec7ef;*/
+    background: rgba(23,27,36,1);
+    width: 150px;
+    /*height: 200px;*/
+    padding: 1em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.listInline{
+    margin: 0; /* Обнуляем значение отступов */
+    font-size: 14px;
+}
+.listInline>li{
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 2px; /* Отступ слева */
+    border: 1px solid #000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+}
+.listInline-li{
+    list-style: none;
+}
+.listInline-li>a{
+    /*text-decoration: none;*/
+    text-shadow: #f00 1px 1px 10px;
+    color: red;
+}
+

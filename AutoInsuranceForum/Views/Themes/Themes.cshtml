@@ -1,0 +1,116 @@
+﻿@model List<ThemesViewModel>
+@{
+    ViewData["Title"] = "Themes";
+}
+<!--Вывод всех тем-->
+<link rel="stylesheet" href="~/css/themes/themes.css" />
+<main id="main">
+    <div id="body-wrapper">
+        <div id="page-header" class="page-width">
+            <div class="headerbar" role="banner">
+                <div class="inner">
+                    <div id="site-description" class="site-description">
+                        <a asp-area="" asp-controller="Home" asp-action="Index"><p class="sitename">Автостраховка.ru</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrap" class="page-width">
+            <div>
+                <div class="navbar">
+                    <ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+                        <li class="breadcrumbs" itemscope="" style="max-width: 889px;">
+                            <span><a asp-area="" asp-controller="Home" asp-action="Index">Главная </a></span>
+                            <span><i class="fas fa-angle-double-right"></i> Форумы </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a id="start_here" class="top-anchor"></a>
+            <div id="page-body" class="page-body" role="main">
+                <h2 class="forum-title">Основной форум</h2>
+                <div class="action-bar bar-top">
+                    <a asp-area="" asp-controller="Themes" asp-action="Create" class="button" title="Новая тема">
+                        <span>Новая тема</span> <i class="fas fa-edit" aria-hidden="true"></i>
+                    </a>
+                    <div class="pagination" oncopy="alert('Копирование запрещено');return false">
+                        <strong>
+                        
+                        </strong> • Страница <strong>1</strong> из <strong>1</strong>
+                    </div>
+                </div>
+                <div class="forumbg">
+                    <div class="inner">
+                        <ul class="topiclist">
+                            <li class="header">
+                                <dl class="row-item">
+                                    <dt>
+                                        <div class="list-inner">Темы</div>
+                                    </dt>
+                                    <dd class="posts">Ответы</dd>
+                                    <dd class="views">Просмотры</dd>
+                                    <dd class="lastpost"><span>Создал пользователь</span></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="topiclist topics">
+                            @foreach (var theme in Model)
+                            {
+                                <li class="row bg1">
+                                    <dl class="row-item topic_read">
+                                        <dt>
+                                            <div class="list-inner">
+                                                <a class="topictitle" asp-area="" asp-controller="Themes" asp-action="Theme" asp-route-id="@theme.Themes_Id">@theme.Themes_Name</a><br>
+                                                <div class="topic-poster responsive-hide left-box">
+                                                    <a href="#" style="color: #AA0000;" class="username-coloured">@theme?.User?.Users_Name</a> » @theme.Themes_Date
+                                                </div>
+
+                                            </div>
+                                        </dt>
+                                        <dd class="posts">@theme?.Comments?.Count()</dd>
+                                        <dd class="views">1574</dd>
+                                        <dd class="lastpost">
+                                            <span>
+                                                <a href="#" style="color: #AA0000;" class="username-coloured">@theme?.User?.Users_Name</a>
+                                                <br>@theme.Themes_Date
+                                            </span>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar" role="navigation">
+                <div class="inner">
+
+                    <ul id="nav-footer" class="nav-footer linklist" role="menubar">
+                        <li class="rightside">
+                            <a href="#">
+                                <span>Связаться с администрацией</span>
+                            </a>
+                        </li>
+                        <li class="rightside">Часовой пояс: <span title="Новосибирск">UTC+07:00 |</span></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright" oncopy="alert('Копирование запрещено');return false">
+            <p class="footer-row">
+                <span class="footer-copyright">Разработчик <a href="https://vk.com/maxeprime" target="_blank">Max Kolbin</a>® | © ASP.NET Core</span>
+            </p>
+            <p class="footer-row" role="menu">
+                <a class="footer-link" href="#" title="Конфиденциальность">
+                    <span class="footer-link-text">Конфиденциальность</span>
+                </a>
+                |
+                <a class="footer-link" href="#" title="Правила">
+                    <span class="footer-link-text">Правила</span>
+                </a>
+            </p>
+        </div>
+    </div>
+</main>

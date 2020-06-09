@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+<link rel="stylesheet" href="~/css/auth/main.css" />
+<link rel="stylesheet" type="text/css" href="~/css/auth/util.css">
+<button type="button" class="nav-toggle"><i class="bx bx-menu"></i></button>
+<nav class="nav-menu">
+    <ul>
+        <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+        <li class="drop-down">
+            <a href="">Меню</a>
+            <ul>
+                <li><a asp-area="" asp-controller="Auth" asp-action="Reg">Регистрация</a></li>
+                <li class="drop-down">
+                    <a href="#">Форум</a>
+                    <ul>
+                        <li><a asp-area="" asp-controller="Themes" asp-action="Themes">Форумы</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index">Поддержка</a></li>
+    </ul>
+</nav><!-- .nav-menu -->
+<main id="main">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title">
+                    @* image надо подобрать *@
+                    <span class="login100-form-title-1">
+                        Вход
+                    </span>
+                </div>
+
+                <form asp-action="AuthGood" class="login100-form validate-form">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="login is required">
+                        <span class="label-input100">Логин</span>
+                        <input class="input100" type="text" name="login" placeholder="Введите логин">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+                        <span class="label-input100">Пароль</span>
+                        <input class="input100" type="password" name="password" placeholder="Введите пароль">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="flex-sb-m w-full p-b-30">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                Условия  &amp; Конфигурации
+                            </label>
+                        </div>
+
+                        <div>
+                            <a href="#" class="txt1">
+                                Забыли пароль?
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Войти
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

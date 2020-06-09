@@ -1,0 +1,103 @@
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+a:hover{
+    color: white;
+}
+input{
+    width: 150px;
+    background-color: #8b95a4;
+}
+.textarea-w{
+    background-color: #8b95a4;
+}
+.input-w{
+    width: 150px;
+    background-color: #8b95a4;
+}
+/*Форумы*/
+.container-theme{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border: 1px solid #5d737f;
+    width: 100%;
+    padding: 5px;
+}
+.container-theme>p>a{
+    /*color: white;*/
+    font-size: 15px;
+    text-decoration: none;
+}
+.container-theme>p{
+
+}
+.container-theme>p>a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.container-theme-user{
+    margin: 0;
+    padding: 0;
+}
+.listInline{
+    padding-right: 10px;
+}
+.listInline>li{
+    list-style-type: none;
+}
+.media{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.media-body{
+    margin-left: 0;
+}
+
+.name-info{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    /*padding-right: 70px;*/
+}
+.name-info>h1{
+    font-size: 20px;
+}
+.name-t{
+    width: 70vw;
+}
+.name-s{
+    width: 30vw;
+}
+.block>h3{
+
+}
+
+.my-container{
+    /*display: flex;*/
+    /*width: 100%;*/
+    padding: 20px 20px;
+
+    /*justify-content: space-between;*/
+}
+
+.redact{
+    font-size: 15px;
+}
+.user-profile-void{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.user-profile-void>p{
+    /*border: 1px solid #5d737f;*/
+}
+.user-profile-void>p>a{
+    text-decoration: none;
+}
